@@ -42,11 +42,22 @@ TEST_F(SoundexEncoding, IgnoresVowelLikeLetters){
     ASSERT_EQ(soundex.Encode("Baeiouhycdl"), "B234");
 }
 
-TEST_F(SoundexEncoding,DISABLED_CombinesDuplicateEncodings){
-    ASSERT_EQ(soundex.Encode("b"), soundex.Encode("f"));
-    ASSERT_EQ(soundex.Encode("c"), soundex.Encode("g"));
-    ASSERT_EQ(soundex.Encode("d"), soundex.Encode("t"));
+TEST_F(SoundexEncoding, CombinesDuplicateEncodings){
+    ASSERT_EQ(soundex.EncodedDigits("b"), soundex.EncodedDigits("f"));
+    ASSERT_EQ(soundex.EncodedDigits("c"), soundex.EncodedDigits("g"));
+    ASSERT_EQ(soundex.EncodedDigits("d"), soundex.EncodedDigits("t"));
 
-    ASSERT_EQ(soundex.Encode("Abfcgdt"), soundex.Encode("A123"));
+    ASSERT_EQ(soundex.Encode("Abfcgdt"), "A123");
 }
 
+TEST_F(SoundexEncoding, UppercasesFirstLetter){
+    ASSERT_THAT(soundex.Encode("abcd"), StartsWith("A"));
+}
+
+TEST_F(SoundexEncoding,IgnoresCaseWhenEncodingConsonants){
+    ASSERT_EQ(soundex.Encode("BCDL"),soundex.Encode("Bcdl"));
+}
+
+TEST_F(SoundexEncoding, DoesNotCombineDuplicateEncodingsSeparatedByVowels){
+    ASSERT_EQ(soundex.Encode("Jbob"), "J110");
+}
