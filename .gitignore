@@ -3,4 +3,6 @@
 *.out
 *.pyc
 *.obj
+*.log
+.idea
 node_modules

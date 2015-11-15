@@ -1,0 +1,14 @@
+[
+  {
+    id: '481b728c-7b2c-48c9-977d-f35546a6e097',
+    task: 'Learn Webpack'
+  },
+  {
+    id: 'b2d9e599-cdc7-4ee8-a2bd-1a8267720c43',
+    task: 'Learn React'
+  },
+  {
+    id: '5c47f33a-4545-4cd8-8e61-bf66510abb9b',
+    task: 'Do laundry'
+  }
+]

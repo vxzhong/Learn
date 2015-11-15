@@ -2,10 +2,12 @@ var path = require('path');
 var webpack = require('webpack');
 // var HtmlwebpackPlugin = require('html-webpack-plugin');
 
-// var TARGET = process.env.npm_lifecycle_event;
+var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, 'app');
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
+
+process.env.BABEL_ENV = TARGET;
 
 module.exports = {
   entry: [path.resolve(APP_PATH, 'index.jsx')],
@@ -14,6 +16,7 @@ module.exports = {
   },
   output: {
     path: BUILD_PATH,
+    publicPath: '/assets/',
     filename: 'bundle.js'
   },
   module: {
