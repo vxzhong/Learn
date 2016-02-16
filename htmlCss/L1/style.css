@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: snow;
+}
+
+.wrapper {
+  width: 80%;
+  height: 1000px;
+  background-color: antiquewhite;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0 auto;
+  width: 100%;
+  height: 90px;
+  background-color: snow;
+}
+
+.heading-nav {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+
+.heading-title {
+  float: left;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  color: burlywood;
+}
+
+.heading-navbar ul {
+  margin-left: 40px;
+  float: left;
+  list-style: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.heading-navbar ul li {
+  padding-left: 10px;
+  display: inline;
+}
+
+.heading-navbar ul li a:link, .heading-navbar ul li a:visited {
+  font-weight: bold;
+  color: darkgray;
+  text-align: center;
+  padding: 6px;
+  text-decoration: none;
+}
+
+.heading-navbar ul li a:hover, .heading-navbar ul li a:active {
+  color: dimgray;
+}
+
+.heading-img img {
+  display: inline;
+  width: 26px;
+  height: 26px;
+  float: right;
+  border-radius: 30px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.spotlight form {
+  float: right;
+  width: 100px;
+  height: 26px;
+  position: relative;
+  margin-right: 50px;
+}
+
+.spotlight form input {
+  height: 26px;
+  border-radius: 30px;
+}
+
+.body {
+  width: auto;
+  height: auto;
+  padding: 30px;
+}
+
+.body-title h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  color: #333333;
+}
+
+.body-title p {
+  padding: 20px 0;
+}
+
+.footing {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 10px;
+  color: darkgray;
+}
