@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <title>Document</title>
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      .wrap-page {
+        height: 100%;
+      }
+      .wrap-page {
+        padding-top: 44px;
+        padding-bottom: 44px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .fixed-top {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 960;
+      }
+      .fixed-bottom {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 940;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header fixed-top"></header>
+    <div class="wrap-page">
+      <section class="page"></section>
+      <section class="page"></section>
+    </div>
+    <footer class="footer fixed-bottom"></footer>
+  </body>
+</html>
