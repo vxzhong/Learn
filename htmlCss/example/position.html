@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>相对绝对定位</title>
+  <style></style>
+</head>
+<style>
+  body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #333333;
+    font-family: "宋体", Arial, Lucida, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  html,
+  body,
+  div,
+  span,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  em,
+  font,
+  img,
+  ins,
+  small,
+  strong,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend {
+    margin: 0;
+    padding: 0;
+  }
+
+  .w {
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .abs {
+    position: absolute;
+  }
+
+  .div1 {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #f0f3f9;
+  }
+
+  .div2 {
+    padding: 20px;
+    margin: 10px 0 0 10px;
+    background-color: #f0f3f9;
+    float: left;
+  }
+
+  #newpros .mt {
+    background: url(http://misc.360buyimg.com/201007/skin/df/i/bg_tit_home.gif) repeat-x scroll 0 -128px #E6E6E6;
+    height: 28px;
+    overflow: hidden;
+  }
+
+  #newpros h2 {
+    background: url(http://misc.360buyimg.com/201007/skin/df/i/bg_tit_home.gif) no-repeat scroll 0 -100px transparent;
+    color: #FFFFFF;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    width: 121px;
+    font-size: 14px;
+  }
+
+  #madding-1 {
+    border-bottom: 1px solid #E2EBF4;
+    padding-bottom: 10px;
+    overflow: hidden;
+  }
+
+  #madding-1 .list-h {
+    overflow: hidden;
+  }
+
+  #madding-1 dl {
+    width: 235px;
+    padding: 0 10px;
+    text-align: center;
+    float: left;
+  }
+
+  #madding-1 dt {
+    height: 130px;
+    position: relative;
+  }
+
+  #madding-1 .p-img {
+    margin: 5px 0;
+  }
+
+  #madding-1 .p-price {
+    background: none repeat scroll 0 0 #FF3333;
+    bottom: 10px;
+    color: #FFFFFF;
+    font-family: arial;
+    font-weight: bold;
+    height: 14px;
+    line-height: 14px;
+    padding: 2px 5px;
+    position: absolute;
+    right: 50px;
+  }
+
+  #madding-1 .new-price-x {
+    margin: -28px 0 0 74px;
+}
+
+#madding-1 .new-price {
+    display: inline-block;
+    background: #FF3333;
+    color: #fff;
+    font-family: arial;
+    font-weight: bold;
+    line-height: 14px;
+    padding: 2px 5px;
+}
+</style>
+
+<body>
+  <!-- <div class="div1">
+      <img src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg"/>
+      <p>无absolute</p>
+    </div>
+    <div class="div1 abs">
+      <img src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg"/>
+      <p>absolute后</p>
+    </div> -->
+
+  <!-- <div class="div2">
+      <img src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg"/>
+      <p>无absolute</p>
+    </div>
+    <div class="div2">
+      <img class="abs" src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg"/>
+      <p>absolute后</p>
+    </div> -->
+
+  <div class="w">
+    <p>&nbsp;</p>
+    <div id="newpros">
+      <div class="mt">
+        <h2>absolute实现</h2>
+      </div>
+    </div>
+    <div id="madding-1">
+      <div class="list-h">
+        <dl>
+          <dt class="p-img">
+          <a href="##"><img width="130" height="130" src="http://img10.360buyimg.com/n3/834/11752677-6197-4ffa-b4c0-e66d02640bad.jpg"></a>
+          <div class="p-price">￥999.00</div>
+        </dt>
+          <dd class="p-name">
+            <a href="##">LG  GD580  3G手机 300万像素 999返100元券！</a>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <div id="newpros">
+      <div class="mt">
+        <h2>margin实现</h2>
+      </div>
+    </div>
+    <div id="madding-1">
+      <div class="list-h">
+        <dl>
+          <dt class="p-img">
+          <a href="##"><img width="130" height="130" src="http://img10.360buyimg.com/n3/834/11752677-6197-4ffa-b4c0-e66d02640bad.jpg"></a>
+          <div class="new-price-x">
+            <span class="new-price">￥999.00</span>
+          </div>
+        </dt>
+          <dd class="p-name">
+            <a href="##">LG  GD580  3G手机 300万像素 999返100元券！</a>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <!-- http://www.zhangxinxu.com/study/201012/position-absolute-replace-method.html -->
+  <!-- 轮播循环 -->
+</body>
+
+</html>
