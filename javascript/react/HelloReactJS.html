@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Hello React</title>
+  <script src="https://fb.me/react-with-addons-0.14.0.js"></script>
+  <script src="https://fb.me/react-dom-0.14.0.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.13.1.js"></script>
+</head>
+<body>
+  <script type="text/jsx">
+  var HelloReact = React.createClass({
+    propTypes: {
+      message: React.PropTypes.string
+    },
+    getDefaultProps: function() {
+      return {
+        message: 'I default'
+      };
+    },
+    render: function() {
+      // return React.DOM.h1(null, 'Hello React');
+      return (
+        <div>
+          <h1>Hello React</h1>
+          <h2>{this.props.message}</h2>
+        </div>
+        );
+    }
+  });
+  // ReactDOM.render(React.createElement(HelloReact), document.body);
+  ReactDOM.render(<HelloReact message='Message from props' />, document.body);
+  </script>
+</body>
+</html>

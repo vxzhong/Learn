@@ -26,7 +26,7 @@ config.plugins = [
   new webpack.optimize.OccurenceOrderPlugin(),
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendors',
-    filename: 'vendors.[contenthash].js',
+    filename: 'vendors.[hash].js',
   }),
   // 提取css为单文件
   new ExtractTextPlugin("../[name].[contenthash].css"),
